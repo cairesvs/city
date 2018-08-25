@@ -1,4 +1,4 @@
-use components::logging::AppLogger;
+use components::logger::AppLogger;
 
 pub struct Context {
     pub environment: &'static str,

@@ -1,4 +1,4 @@
 pub mod context;
 pub mod json;
-pub mod logging;
+pub mod logger;
 pub mod router;
