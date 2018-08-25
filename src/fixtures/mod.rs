@@ -1,1 +1,1 @@
-pub data;
+pub mod data;

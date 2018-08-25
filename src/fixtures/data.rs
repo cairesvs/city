@@ -1,4 +1,6 @@
-use serde_json::value::Value;
+extern crate serde_json;
+
+use self::serde_json::value::Value;
 
 pub fn make_data() -> Value {
     json!({
