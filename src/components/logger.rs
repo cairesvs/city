@@ -6,6 +6,7 @@ extern crate std;
 use slog::Drain;
 use slog::*;
 
+#[derive(Clone)]
 pub struct AppLogger {
     logger: Logger,
 }

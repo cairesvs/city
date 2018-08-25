@@ -17,13 +17,8 @@ use iron::prelude::*;
 use iron::Iron;
 
 fn main() {
-    let ctx = Context::new();
-    ctx.logger.info("comecou");
-
-    let services = Services::new(ctx);
-    let router = services.router;
-
-    let mut chain = Chain::new(router);
+    let services = Services::new(Context::new());
+    let mut chain = Chain::new(services.router);
     chain.link_after(JsonResponseMiddleware::new());
 
     match Iron::new(chain).http("127.0.0.1:3000") {

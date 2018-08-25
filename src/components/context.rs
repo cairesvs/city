@@ -1,5 +1,6 @@
 use components::logger::AppLogger;
 
+#[derive(Clone)]
 pub struct Context {
     pub environment: &'static str,
     pub logger: AppLogger,
