@@ -18,7 +18,7 @@ use iron::Iron;
 
 fn main() {
     let services = Services::new(Context::new());
-    let mut chain = Chain::new(services.router);
+    let mut chain = Chain::new(services.get_router());
     chain.link_after(JsonResponseMiddleware::new());
 
     match Iron::new(chain).http("127.0.0.1:3000") {

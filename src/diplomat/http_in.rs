@@ -6,7 +6,13 @@ use iron::{Handler, IronResult, Request, Response};
 
 #[derive(Clone)]
 pub struct IndexHandler {
-    pub ctx: Context,
+    ctx: Context,
+}
+
+impl IndexHandler {
+    pub fn new(ctx: Context) -> IndexHandler {
+        IndexHandler { ctx }
+    }
 }
 
 impl Handler for IndexHandler {
@@ -18,7 +24,13 @@ impl Handler for IndexHandler {
 
 #[derive(Clone)]
 pub struct ListHandler {
-    pub ctx: Context,
+    ctx: Context,
+}
+
+impl ListHandler {
+    pub fn new(ctx: Context) -> ListHandler {
+        ListHandler { ctx }
+    }
 }
 
 impl Handler for ListHandler {
